@@ -1,0 +1,22 @@
+<div class="table-container">
+    <button class="btn-insert" routerLink="/franquicia-edit">Insertar</button>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let franquicia of franquicias;">
+                <td>{{franquicia.id_franquicia}}</td>
+                <td>{{franquicia.nombre_franquicia}}</td>
+                <td>
+                    <button class="btn-edit" [routerLink]="['/franquicia-edit',franquicia.id_franquicia]">Editar</button>
+                    <button class="btn-delete" (click)="eliminarFranquicia(franquicia.id_franquicia)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

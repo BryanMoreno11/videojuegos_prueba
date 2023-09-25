@@ -1,0 +1,10 @@
+<div class="registration-form">
+    <h2>Registro de Franquicia de Videojuego</h2>
+    <form (ngSubmit)="edit ? modificarFranquicia() :  insertarFranquicia(forma)" #forma="ngForm">
+        <div class="form-group">
+            <label for="franchiseName">Nombre de la Franquicia:</label>
+            <input type="text" id="franchiseName" name="franchiseName" required [(ngModel)]="franquicia.nombre_franquicia" />
+        </div>
+        <button type="submit">Registrar Franquicia</button>
+    </form>
+</div>
